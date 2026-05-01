@@ -13,15 +13,13 @@
     <link href="Stylesheet.css" rel="stylesheet" />
     <script src="JavaScript1.js"></script>
 </head>
-
 <body>
     <div id="toastBox">Booking Details Collected..!! Open the Whatsapp app to confirm ✅</div>
-
     <!-- NAV -->
     <nav id="mainNavbar" class="navbar navbar-expand-lg navbar-dark fixed-top">
         <div class="container">
             <a class="navbar-brand">
-                <img src="Logo1.jpeg" alt="Mass Riders Tours & Travels Logo">
+                <!--<img src="Logo1.jpeg" alt="Mass Riders Tours & Travels Logo">-->
                 <span style="color:#ff6600;">Mass Riders Tours & Travels</span>
             </a>
 
@@ -32,7 +30,7 @@
             <div class="collapse navbar-collapse" id="menu">
                 <ul class="navbar-nav ms-auto text-center">
                     <li class="nav-item"><a class="nav-link text-white" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#fleet">Fleet</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#booking">Booking</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#reviews">Reviews</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
@@ -44,15 +42,15 @@
     <!-- HERO -->
     <section id="home" class="hero">
         <div class="container">
-            <h3 class="display-4 fw-bold">One Way / Up and Down Services Available</h3>
-            <center><p class="lead">• Safe • Fast • Affordable Prices</p></center>
+            <center><h3 class="display-4 fw-bold">One Way / Up and Down Services Available</h3></center>
+            <center><h4 class="lead">• Safe • Fast • Affordable Prices</h4></center>
         </div>
     </section>
 
     <!-- GALLERY CAROUSEL -->
-    <section id="gallery" class="py-5">
+    <section id="fleet" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Our Fleet</h2>
+            <h2 class="mb-2 mt-3">Our Fleet</h2>
 
             <div class="swiper mySwiper">
                 <div class="swiper-wrapper">
@@ -60,7 +58,7 @@
                     <!-- CARD 1 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="https://images.unsplash.com/photo-1549924231-f129b911e442">
+                            <img src="SEDAN.jpg" />
                             <div class="p-3">
                                 <h5>Sedan</h5>
                                 <p>Up & Down: ₹12/km</p>
@@ -72,7 +70,7 @@
                     <!-- CARD 2 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a">
+                            <img src="SUV.jpg" />
                             <div class="p-3">
                                 <h5>SUV</h5>
                                 <p>Up & Down: ₹17/km</p>
@@ -84,7 +82,7 @@
                     <!-- CARD 3 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="https://images.unsplash.com/photo-1519641471654-76ce0107ad1b">
+                            <img src="Innova.jpg" />
                             <div class="p-3">
                                 <h5>Innova</h5>
                                 <p>Up & Down: ₹17/km</p>
@@ -96,7 +94,7 @@
                     <!-- CARD 4 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="https://images.unsplash.com/photo-1552519507-da3b142c6e3d">
+                            <img src="Tavera.jpg" />
                             <div class="p-3">
                                 <h5>Tavera</h5>
                                 <p>Up & Down: ₹17/km</p>
@@ -108,7 +106,7 @@
                     <!-- CARD 5 -->
                     <div class="swiper-slide">
                         <div class="card">
-                            <img src="https://images.unsplash.com/photo-1606664515524-ed2f786a0bd6">
+                            <img src="Xylo.jpg" />
                             <div class="p-3">
                                 <h5>Xylo</h5>
                                 <p>Up & Down: ₹17/km</p>
@@ -125,7 +123,7 @@
     <!-- BOOKING -->
     <section id="booking" class="py-5 bg-light">
         <div class="container">
-            <h2 class="text-center mb-4">Book Your Ride</h2>
+            <h2 class="text-center mb-2 mt-3">Book Your Ride</h2>
 
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -185,7 +183,7 @@
     <!-- REVIEWS -->
     <section id="reviews" class="py-5">
         <div class="container text-center">
-            <h2>Customer Reviews</h2>
+            <h2 class="mb-2 mt-3">Customer Reviews</h2>
             <div class="row mt-4">
 
                 <div class="col-md-4"><div class="card p-3">Great service ⭐⭐⭐⭐⭐</div></div>
@@ -200,17 +198,16 @@
     <!-- CONTACT -->
     <section id="contact" class="py-5">
         <div class="container text-center">
-            <h2 class="mb-4">Contact</h2>
+            <h2 class="mb-2 mt-3">Contact</h2>
 
             <div class="row g-4">
 
                 <div class="col-md-5">
                     <div class="booking-card text-center">
-
-                        <img src="Logo1.jpeg"
-                             style="height:70px;width:70px;border-radius:14px;
-         object-fit:cover;border:2px solid #ff6600;
-         margin-bottom:10px;">
+                        <img src="Logo.PNG"
+                             style="height:200px;width:300px;border-radius:14px;
+                        object-fit:cover;
+                        margin-bottom:10px;">
 
                         <h5 class="fw-bold mb-2">Mass Travels</h5>
 
@@ -232,8 +229,17 @@
     </section>
 
     <!-- FLOAT -->
-    <a class="float-whatsapp" href="https://wa.me/919566710585"><i class="fab fa-whatsapp"></i></a>
-    <a class="float-call" href="tel:+919566710585"><i class="fa fa-phone"></i></a>
+    <a class="float-whatsapp" href="https://wa.me/919566710585">
+        <span class="tooltip-text">Chat with us</span>
+        <span class="badge">24/7</span>
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a class="float-call" href="tel:+919566710585">
+        <span class="tooltip-text">Call now</span>
+        <span class="badge">24/7</span>
+        <i class="fa fa-phone"></i>
+    </a>
     <script>
 
         const swiper = new Swiper(".mySwiper", {
@@ -264,6 +270,6 @@
         });
 
     </script>
-    
+
 </body>
 </html>
