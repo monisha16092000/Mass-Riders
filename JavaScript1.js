@@ -5,6 +5,26 @@
         }
     });
 });
+//Navbar scroll effect
+window.addEventListener("scroll", function () {
+    let navbar = document.getElementById("mainNavbar");
+    navbar.classList.toggle("scrolled", window.scrollY > 50);
+});
+//Auto collapse navbar on link click (for mobile)
+document.addEventListener("DOMContentLoaded", function () {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navbarCollapse = document.getElementById('menu');
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 992) {
+                const bsCollapse = bootstrap.Collapse.getInstance(navbarCollapse)
+                    || new bootstrap.Collapse(navbarCollapse);
+                bsCollapse.hide();
+            }
+        });
+    });
+});
 //Only allow letters in the phone input field
 function AlphaOnly(e) {
     let key = e.key;
@@ -15,11 +35,6 @@ function AlphaOnly(e) {
         e.preventDefault();
         return false;
     }
-
-    // Convert to uppercase after input
-    setTimeout(() => {
-        e.target.value = e.target.value.toUpperCase();
-    }, 0);
 
     return true;
 }
@@ -33,7 +48,7 @@ function NumberOnly(e) {
 const rates = {
     Select: { oneWay: 0, roundTrip: 0 },
     Sedan: { oneWay: 14, roundTrip: 12 },
-    CorollaAltis: { oneWay: 15, roundTrip: 13 },
+    CorollaAltis: { oneWay: 15, roundTrip: 14 },
     SUV: { oneWay: 20, roundTrip: 17 },
     Innova: { oneWay: 20, roundTrip: 17 },
     Tavera: { oneWay: 20, roundTrip: 17 },
@@ -72,7 +87,10 @@ function calculateDistanceAmount() {
 
     document.getElementById("price").innerText = Distanceamt;
 }
-function ConfirmBooking() {
+function ConfirmBooking(event) {
+
+    if (event) event.preventDefault(); // stops refresh
+
     const form = document.getElementById("bookingForm");
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
@@ -92,6 +110,11 @@ function ConfirmBooking() {
         return;
     }
     // Validate phone number
+    if (phone.length !== 10) {
+        toast("Please enter a valid Phone number..!!", "error");
+        return;
+    }
+
     if (!phone.startsWith("6") && !phone.startsWith("7") && !phone.startsWith("8") && !phone.startsWith("9")) {
         toast("Please enter a valid Phone number..!!", "error");
         return;
@@ -128,7 +151,7 @@ function ConfirmBooking() {
 }
 
 /* TOAST */
-function toast(Msg,type) {
+function toast(Msg, type) {
     const t = document.getElementById("toastBox");
     t.style.display = "block";
     t.innerText = Msg;
@@ -154,3 +177,20 @@ function validateDateTime(date, time) {
     }
     return true;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const text = "• Safe • Fast • Affordable";
+    const speed = 80;
+    let i = 0;
+
+    function typeEffect() {
+        if (i < text.length) {
+            document.getElementById("typing-text").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeEffect, speed);
+        }
+    }
+
+    typeEffect();
+});
